@@ -77,12 +77,30 @@ autoload edit-command-line; zle -N edit-command-line
 # bindkey '^e' edit-command-line
 
 # TODO Remove these
-setxkbmap -option caps:escape
-xset r rate 210 40
+# setxkbmap -option caps:escape
+# xset r rate 210 40
 
 # Speedy keys
 # xset r rate 210 40
+case "$(uname -s)" in
 
+Darwin)
+	# echo 'Mac OS X'
+	alias ls='ls -G'
+	;;
+
+Linux)
+  setxkbmap -option caps:escape
+  xset r rate 210 40
+	;;
+
+CYGWIN* | MINGW32* | MSYS* | MINGW*)
+	# echo 'MS Windows'
+	;;
+*)
+	# echo 'Other OS'
+	;;
+esac
 # Environment variables set everywhere
 export EDITOR="nvim"
 export TERMINAL="alacritty"
