@@ -3,6 +3,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_DATA_DIRS=/usr/share:/usr/local/share:/var/lib/flatpak/exports/share:$XDG_DATA_HOME/flatpak/exports/share
+
 # zsh config dir
 export ZDOTDIR=$HOME/.config/zsh
 
@@ -20,7 +21,7 @@ xset r rate 210 40
 
 # Environment variables set everywhere
 export EDITOR="nvim"
-export TERMINAL="kitty"
+export TERMINAL="alacritty"
 export BROWSER="firefox"
 
 # remap caps to escape
