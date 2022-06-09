@@ -1,4 +1,6 @@
-[submodule "https://github.com/lcpz/awesome-freedesktop"]
-	url = awesome/.config/awesome/awesome-freedesktop
-[submodule "https://github.com/lcpz/lain"]
-	url = awesome/.config/awesome/lain
+[submodule "awesome-freedesktop"]
+	path = awesome/.config/awesome/awesome-freedesktop
+	url = git@github.com:lcpz/awesome-freedesktop.git
+[submodule "awesome-lain"]
+	path = awesome/.config/awesome/lain
+	url = git@github.com:lcpz/lain.git
