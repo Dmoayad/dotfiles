@@ -57,7 +57,7 @@ tools = {
 
 applications = {
 	{ "Internet", internet, icon_dir .. 'internet-archive.svg' },
-	{ "File Manager", 'pcmanfm', icon_dir .. 'system-file-manager.svg' },
+	{ "File Manager", 'nautilus', icon_dir .. 'system-file-manager.svg' },
 	{ "Text Editor", texteditor, icon_dir .. 'text-editor.svg' },
 	{ "Media", media, icon_dir .. 'media-player-48.svg' },
 	{ "Steam", 'steam', icon_dir .. 'steam.svg' },

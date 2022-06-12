@@ -22,4 +22,4 @@ run volumeicon
 #run urxvtd
 run nitrogen --restore
 #run picom
-run discord
+# run discord
