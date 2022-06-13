@@ -21,5 +21,6 @@ run volumeicon
 #run gnome-keyring-daemon
 #run urxvtd
 run nitrogen --restore
+run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #run picom
 # run discord
