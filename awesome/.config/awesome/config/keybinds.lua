@@ -112,7 +112,12 @@ globalkeys = gears.table.join(
     --
     awful.key({ modkey },            "r",     function () awful.spawn("rofi -show drun") end,
               {description = "run prompt", group = "launcher"}),
-
+    awful.key({ }, "Print", function()
+              awful.spawn.with_shell("maim -u | tee ~/Pictures/screenshots/$(date +%s).png | xclip -selection clipboard -t image/png") end,
+{ description = "screenshot", group= "screen"}),
+    awful.key({ "Control" }, "Print", function()
+              awful.spawn.with_shell("maim -s -u | tee ~/Pictures/screenshots/$(date +%s).png | xclip -selection clipboard -t image/png") end,
+{ description = "screenshot with selection", group= "screen"}),
     awful.key({ modkey }, "x",
               function ()
                   awful.prompt.run {
