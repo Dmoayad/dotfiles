@@ -99,6 +99,4 @@ export BROWSER="firefox"
 
 
 
-# fnm
-export PATH=/home/mo/.fnm:$PATH
-eval "`fnm env`"
+
