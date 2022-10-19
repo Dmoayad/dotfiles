@@ -18,19 +18,18 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
-
 -- choose your theme here
 local accents = {
-    "tomorrow-dark",   		-- 1
-    "otis-forest",			-- 2
-    "winter",				-- 3
-
+	"tomorrow-dark", -- 1
+	"otis-forest", -- 2
+	"winter", -- 3
+  "onedark", -- 4
+  "tokyonight", -- 5
 }
 -- choose your theme here
-local chosen_accents = accents[1]
+local chosen_accents = accents[5]
 local theme_path = string.format("%s/.config/awesome/themes/accents/%s.lua", os.getenv("HOME"), chosen_accents)
 beautiful.init(theme_path)
-
 
 -- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 -- require("config")
@@ -60,7 +59,6 @@ require("config.bar")
 
 -- Autorun
 require("config.autorun")
-
 
 -- Collecting Garbage :
 collectgarbage("setpause", 110)

@@ -100,8 +100,10 @@ end)
 
 -- Net :
 local net = lain.widget.net{
+    units = 1048576,
     settings = function()
-        widget:set_markup("  " .. net_now.received .. " ↓↑ " .. net_now.sent .. " ")
+    
+        widget:set_markup("  " .. net_now.received.. " ↓↑ " .. net_now.sent .. " ")
     end
 }
 net.widget.font = theme.font
@@ -253,7 +255,8 @@ mykeyboardlayout = wibox.widget {
 
 -- Textclock :
 local clock = awful.widget.watch(
-    "date +'%a %d %b | %H:%M ' ", 60,
+-- " date +'%a %d %b | %H:%M ' " clock in 24H rotation
+    " date +'%a %d %b | %I:%M %p ' ",5,
     function(widget, stdout)
         widget:set_markup("⧗ " .. stdout)
     end

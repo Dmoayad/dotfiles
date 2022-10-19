@@ -98,3 +98,5 @@ export TERMINAL="alacritty"
 export BROWSER="firefox"
 
 
+
+

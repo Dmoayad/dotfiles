@@ -79,6 +79,8 @@ Darwin)
 	;;
 
 Linux)
+  alias open='xdg-open'
+  alias mime='xdg-mime'
 	;;
 
 CYGWIN* | MINGW32* | MSYS* | MINGW*)
