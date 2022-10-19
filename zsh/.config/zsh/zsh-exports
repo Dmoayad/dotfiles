@@ -21,7 +21,7 @@ case "$(uname -s)" in
 Darwin)
 	# echo 'Mac OS X'
 	alias ls='ls -G'
-
+export PATH="/usr/local/sbin:$PATH"
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
