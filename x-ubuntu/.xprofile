@@ -8,7 +8,7 @@ export XDG_DATA_DIRS=$XDG_DATA_DIRS:/usr/share:/usr/local/share:/var/lib/flatpak
 export ZDOTDIR=$HOME/.config/zsh
 
 # monitor order.
-xrandr --output DP-2 --mode 1920x1080 --rate 144.00
+xrandr --output DP-2 --mode 1920x1080 
 xrandr --auto --output HDMI-0 --mode 1920x1080 --left-of DP-2
 
 # Don't Randomly Turn off
@@ -21,7 +21,7 @@ xset r rate 210 40
 
 # Environment variables set everywhere
 export EDITOR="nvim"
-export TERMINAL="alacritty"
+export TERMINAL="kitty"
 export BROWSER="firefox"
 
 # For QT Themes
@@ -38,7 +38,7 @@ export GTK_IM_MODULE=uim
 export QT_IM_MODULE=uim
 uim-xim &
 export XMODIFIERS=@im=uim
-#uim-toolbar-gtk3-systray &
+# uim-toolbar-gtk3-systray &
 
 
 # Load Xresources
