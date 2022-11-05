@@ -18,7 +18,7 @@ gpgconf --launch gpg-agent
 
 eval "$(fnm env)"
 eval "$(zoxide init zsh)"
-# eval "`pip completion --zsh`"
+eval "`pip completion --zsh`"
 
 
 
