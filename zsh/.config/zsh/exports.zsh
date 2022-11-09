@@ -14,7 +14,7 @@ export PATH=$HOME./node_modules/.bin:$PATH
 # gpg controls ssh
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 export GPG_TTY=$(tty)
-gpgconf --launch gpg-agent
+# gpgconf --launch gpg-agent
 
 eval "$(fnm env)"
 eval "$(zoxide init zsh)"
