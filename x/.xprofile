@@ -8,7 +8,7 @@ export XDG_DATA_DIRS=$XDG_DATA_DIRS:/usr/share:/usr/local/share:/var/lib/flatpak
 export ZDOTDIR=$HOME/.config/zsh
 
 # monitor order.
-xrandr --output DP-2 --mode 1920x1080 --rate 144.00
+xrandr --output DP-2 --mode 1920x1080 --rate 239.76
 xrandr --auto --output HDMI-0 --mode 1920x1080 --left-of DP-2
 
 # Don't Randomly Turn off
