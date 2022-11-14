@@ -14,12 +14,9 @@ export PATH=$HOME./node_modules/.bin:$PATH
 # gpg controls ssh
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 export GPG_TTY="$(tty)"
-# gpgconf --launch gpg-agent
+gpgconf --launch gpg-agent
 
-if [ 0 -eq `(ps aux | grep -v grep | grep -ci gpg-agent)` ]; then 
-  # echo "gpg is now running"
-  eval "$(gpg-agent --daemon)"
-fi
+
 
 eval "$(fnm env)"
 eval "$(zoxide init zsh)"
@@ -34,6 +31,10 @@ Darwin)
 	alias ls='ls -G'
   # export for brew in macOS
   export PATH="/usr/local/sbin:$PATH"
+  if [ 0 -eq `(ps aux | grep -v grep | grep -ci gpg-agent)` ]; then 
+  # echo "gpg is now running"
+    eval "$(gpg-agent --daemon)"
+  fi
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
