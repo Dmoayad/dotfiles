@@ -22,5 +22,5 @@ run volumeicon
 #run urxvtd
 run nitrogen --restore
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-run picom -b
+run picom 
 # run discord
