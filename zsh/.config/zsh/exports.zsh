@@ -14,7 +14,6 @@ export PATH=$HOME./node_modules/.bin:$PATH
 # gpg controls ssh
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 export GPG_TTY="$(tty)"
-gpgconf --launch gpg-agent
 
 
 
@@ -33,7 +32,7 @@ Darwin)
   export PATH="/usr/local/sbin:$PATH"
   if [ 0 -eq `(ps aux | grep -v grep | grep -ci gpg-agent)` ]; then 
   # echo "gpg is now running"
-    eval "$(gpg-agent --daemon)"
+    eval "$(gpg-agent --enable-ssh-support --daemon)"
   fi
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -54,6 +53,7 @@ unset __conda_setup
 
 Linux)
 
+  gpgconf --launch gpg-agent
   # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('$HOME/.miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
