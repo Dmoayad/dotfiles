@@ -34,10 +34,10 @@ autoload -Uz colors && colors
 source "$ZDOTDIR/functions.zsh"
 
 # Normal files to source
-zsh_add_file "exports.zsh"
-zsh_add_file "vim-mode.zsh"
 zsh_add_file "aliases.zsh"
+zsh_add_file "vim-mode.zsh"
 zsh_add_file "prompt.zsh"
+zsh_add_file "exports.zsh"
 
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"

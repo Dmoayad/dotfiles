@@ -78,6 +78,8 @@ Darwin)
 	alias brewcup='brew list --cask | xargs brew upgrade'
 	alias brewin='brew install'
 	alias brewrm='brew uninstall'
+	alias python=python3
+	alias pip=pip3
 	;;
 
 Linux)

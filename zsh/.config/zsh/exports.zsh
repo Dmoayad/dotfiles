@@ -15,21 +15,16 @@ export PATH=$HOME./node_modules/.bin:$PATH
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 export GPG_TTY="$(tty)"
 
-
-
 eval "$(fnm env)"
 eval "$(zoxide init zsh)"
 eval "$(pip completion --zsh)"
-
 
 
 case "$(uname -s)" in
 
 Darwin)
 	# echo 'Mac OS X'
-	alias ls='ls -G'
-  # export for brew in macOS
-  export PATH="/usr/local/sbin:$PATH"
+	# alias ls='ls -G'
   if [ 0 -eq `(ps aux | grep -v grep | grep -ci gpg-agent)` ]; then 
   # echo "gpg is now running"
     eval "$(gpg-agent --enable-ssh-support --daemon)"
@@ -78,5 +73,7 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
 	# echo 'Other OS'
 	;;
 esac
+
+
 
 

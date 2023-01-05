@@ -1,2 +1,6 @@
-.zcompcache
+**/.zcompcache
 .DS_Store
+**/.zsh_history
+**/.zsh_sessions
+**/.zcompdump
+**/zsh/plugins
