@@ -17,8 +17,8 @@ export GPG_TTY="$(tty)"
 
 eval "$(fnm env)"
 eval "$(zoxide init zsh)"
-eval "$(pip completion --zsh)"
-
+# eval "$(pip completion --zsh)"
+# compctl -K _pip_completion pip3
 
 case "$(uname -s)" in
 
