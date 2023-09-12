@@ -10,6 +10,8 @@ export PATH=$HOME/.local/share/go/bin:$PATH
 export GOPATH=$HOME/.local/share/go
 export PATH=$HOME/.fnm:$PATH
 export PATH=$HOME./node_modules/.bin:$PATH
+export EDITOR="nvim"
+export PATH="$HOME/.local/share/neovim/bin":$PATH
 
 # gpg controls ssh
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
