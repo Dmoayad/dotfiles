@@ -59,11 +59,11 @@ alias s="git checkout stable"
 
 # ALIASES ##
 # Changing "ls" to "exa"
-alias ls='exa --group-directories-first --icons'                     # listing
-alias lla='exa -al --color=always --group-directories-first --icons' # my preferred listing
-alias la='exa -a --color=always --group-directories-first --icons'   # all files and dirs
-alias ll='exa -l --color=always --group-directories-first --icons'   # long format
-alias lt='exa -aT --color=always --group-directories-first --icons'  # tree listing
+alias ls='eza --group-directories-first --icons'                     # listing
+alias lla='eza -al --color=always --group-directories-first --icons' # my preferred listing
+alias la='eza -a --color=always --group-directories-first --icons'   # all files and dirs
+alias ll='eza -l --color=always --group-directories-first --icons'   # long format
+alias lt='eza -aT --color=always --group-directories-first --icons'  # tree listing
 
 # if [[ $TERM == "xterm-kitty" ]]; then
 # 	alias ssh="kitty +kitten ssh"
