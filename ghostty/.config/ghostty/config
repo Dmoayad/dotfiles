@@ -1,3 +1,4 @@
 theme = tokyonight
 macos-titlebar-style = tabs
-
+window-height = 40
+window-width = 120
