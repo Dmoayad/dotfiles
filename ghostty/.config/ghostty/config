@@ -3,3 +3,4 @@ font-family = FiraCode Nerd Font Mono
 macos-titlebar-style = tabs
 window-height = 40
 window-width = 120
+shell-integration-features = sudo
