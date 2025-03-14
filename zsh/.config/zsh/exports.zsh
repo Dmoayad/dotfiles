@@ -23,6 +23,7 @@ eval "$(fnm env)"
 eval "$(zoxide init zsh)"
 # eval "$(pip completion --zsh)"
 # compctl -K _pip_completion pip3
+eval "$(pixi completion --shell zsh)"
 
 case "$(uname -s)" in
 
