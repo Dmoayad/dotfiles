@@ -1,5 +1,5 @@
 theme = tokyonight
-font-family = FiraCode Nerd Font Mono
+font-family = CommitMono Nerd Font Mono
 macos-titlebar-style = tabs
 window-height = 40
 window-width = 120

@@ -19,6 +19,8 @@ export TMUX_CONF="$TMUX_CONFIG_HOME/tmux.conf"
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 export GPG_TTY="$(tty)"
 
+autoload -Uz compinit && compinit
+
 eval "$(fnm env)"
 eval "$(zoxide init zsh)"
 # eval "$(pip completion --zsh)"
