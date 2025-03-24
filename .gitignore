@@ -1,5 +1,6 @@
 **/.zcompcache
 .DS_Store
+plugins
 **/.zsh_history
 **/.zsh_sessions
 **/.zcompdump*
