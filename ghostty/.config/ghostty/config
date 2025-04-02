@@ -1,4 +1,4 @@
-theme = tokyonight
+theme = catppuccin-mocha
 font-family = CommitMono Nerd Font Mono
 macos-titlebar-style = tabs
 window-height = 40
