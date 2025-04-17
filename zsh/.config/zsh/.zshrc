@@ -1,3 +1,5 @@
+# zmodload zsh/zprof
+
 # Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
@@ -36,5 +38,6 @@ fi
 
 
 # Load and initialise completion system
-autoload -Uz compinit
-compinit
+# autoload -Uz compinit && compinit
+
+# zprof

@@ -10,12 +10,6 @@ alias src='source ~/.config/zsh/.zshrc'
 alias vim='nvim'
 # alias lvim='nvim -u ~/.local/share/lunarvim/lvim/init.lua --cmd "set runtimepath+=~/.local/share/lunarvim/lvim"'
 
-# get fastest mirrors
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
-
 # Remarkable
 alias remarkable_ssh='ssh root@10.11.99.1'
 alias restream='restream -p'
@@ -83,8 +77,13 @@ Darwin)
 	;;
 
 Linux)
-  alias open='xdg-open'
-  alias mime='xdg-mime'
+	alias open='xdg-open'
+	alias mime='xdg-mime'
+	# get fastest mirrors
+	alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+	alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+	alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+	alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 	;;
 
 CYGWIN* | MINGW32* | MSYS* | MINGW*)
