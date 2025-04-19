@@ -8,7 +8,6 @@ alias src='source ~/.config/zsh/.zshrc'
 
 # vim
 alias vim='nvim'
-# alias lvim='nvim -u ~/.local/share/lunarvim/lvim/init.lua --cmd "set runtimepath+=~/.local/share/lunarvim/lvim"'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
@@ -55,37 +54,33 @@ alias la='eza -a --color=always --group-directories-first --icons'   # all files
 alias ll='eza -l --color=always --group-directories-first --icons'   # long format
 alias lt='eza -aT --color=always --group-directories-first --icons'  # tree listing
 
-# if [[ $TERM == "xterm-kitty" ]]; then
-# 	alias ssh="kitty +kitten ssh"
-# fi
-
 case "$(uname -s)" in
 
 Darwin)
-	# echo 'Mac OS X'
-	# brew aliases
-	alias brewup='brew update && brew upgrade'
-	alias brewcup='brew list --cask | xargs brew upgrade'
-	alias brewin='brew install'
-	alias brewrm='brew uninstall'
-	alias python=python3
-	alias pip=pip3
-	;;
+    # echo 'Mac OS X'
+    # brew aliases
+    alias brewup='brew update && brew upgrade'
+    alias brewcup='brew list --cask | xargs brew upgrade'
+    alias brewin='brew install'
+    alias brewrm='brew uninstall'
+    alias python=python3
+    alias pip=pip3
+    ;;
 
 Linux)
-	alias open='xdg-open'
-	alias mime='xdg-mime'
-	# get fastest mirrors
-	alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-	alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-	alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-	alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
-	;;
+    alias open='xdg-open'
+    alias mime='xdg-mime'
+    # get fastest mirrors
+    alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+    alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+    alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+    alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+    ;;
 
 CYGWIN* | MINGW32* | MSYS* | MINGW*)
-	# echo 'MS Windows'
-	;;
+    # echo 'MS Windows'
+    ;;
 *)
-	# echo 'Other OS'
-	;;
+    # echo 'Other OS'
+    ;;
 esac
