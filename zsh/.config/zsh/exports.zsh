@@ -30,57 +30,51 @@ eval "$(pixi completion --shell zsh)"
 case "$(uname -s)" in
 
 Darwin)
-	# echo 'Mac OS X'
-	# alias ls='ls -G'
-  if [ 0 -eq `(ps aux | grep -v grep | grep -ci gpg-agent)` ]; then 
-  # echo "gpg is now running"
-    eval "$(gpg-agent --enable-ssh-support --daemon)"
-  fi
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+    if [ 0 -eq $( (ps aux | grep -v grep | grep -ci gpg-agent)) ]; then
+        # echo "gpg is now running"
+        eval "$(gpg-agent --enable-ssh-support --daemon)"
     fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-	;;
+
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
+    __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
+    else
+        if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+            . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+        else
+            export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+        fi
+    fi
+    unset __conda_setup
+    # <<< conda initialize <<<
+    ;;
 
 Linux)
 
-  gpgconf --launch gpg-agent
-  # >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('$HOME/.miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "$HOME/.miniconda/etc/profile.d/conda.sh" ]; then
-        . "$HOME/.miniconda/etc/profile.d/conda.sh"
+    gpgconf --launch gpg-agent
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
+    __conda_setup="$('$HOME/.miniconda/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
     else
-        export PATH="$HOME/.miniconda/bin:$PATH"
+        if [ -f "$HOME/.miniconda/etc/profile.d/conda.sh" ]; then
+            . "$HOME/.miniconda/etc/profile.d/conda.sh"
+        else
+            export PATH="$HOME/.miniconda/bin:$PATH"
+        fi
     fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+    unset __conda_setup
+    # <<< conda initialize <<<
 
-;;
+    ;;
 
 CYGWIN* | MINGW32* | MSYS* | MINGW*)
-	# echo 'MS Windows'
-	;;
+    # echo 'MS Windows'
+    ;;
 *)
-	# echo 'Other OS'
-	;;
+    # echo 'Other OS'
+    ;;
 esac
-
-
-
-

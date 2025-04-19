@@ -6,13 +6,9 @@ alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git
 alias nvimrc='nvim ~/.config/nvim/'
 alias src='source ~/.config/zsh/.zshrc'
 
-# alias vim='nvim'
+# vim
 alias vim='nvim'
 # alias lvim='nvim -u ~/.local/share/lunarvim/lvim/init.lua --cmd "set runtimepath+=~/.local/share/lunarvim/lvim"'
-
-# Remarkable
-alias remarkable_ssh='ssh root@10.11.99.1'
-alias restream='restream -p'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
