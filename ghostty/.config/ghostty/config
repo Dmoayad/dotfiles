@@ -1,5 +1,7 @@
 theme = catppuccin-mocha
 font-family = FiraCode Nerd Font
+font-size                      = 13
+window-inherit-font-size       = true
 # CommitMono Nerd Font Mono
 macos-titlebar-style = tabs
 window-height = 40
