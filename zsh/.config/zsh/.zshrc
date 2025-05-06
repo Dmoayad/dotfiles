@@ -3,7 +3,6 @@
 # Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
-
 # history
 HISTFILE=~/.zsh_history
 
@@ -29,13 +28,10 @@ bindkey '^ ' autosuggest-accept
 
 export PATH="$HOME/.local/bin":$PATH
 
-if command -v bat &> /dev/null; then
-  alias cat="bat -pp --theme \"Visual Studio Dark+\"" 
-  alias catt="bat --theme \"Visual Studio Dark+\"" 
+if command -v bat &>/dev/null; then
+    alias cat="bat -pp --theme \"Visual Studio Dark+\""
+    alias catt="bat --theme \"Visual Studio Dark+\""
 fi
-
-
-
 
 # Load and initialise completion system
 # autoload -Uz compinit && compinit
