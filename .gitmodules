@@ -8,6 +8,3 @@
 	path = nvim/.config/nvim
 	url = git@github.com:Dmoayad/nvim.git
   ; ignore = dirty
-[submodule "nvim/.config/nvim"]
-	path = nvim/.config/nvim
-	url = git@github.com:Dmoayad/nvim.git
