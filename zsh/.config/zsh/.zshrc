@@ -13,17 +13,15 @@ plug "$HOME/.config/zsh/exports.zsh"
 # plugins
 # plug "esc/conda-zsh-completion"
 plug "zsh-users/zsh-autosuggestions"
-plug "hlissner/zsh-autopair"
+# plug "hlissner/zsh-autopair"
 # plug "zap-zsh/supercharge"
-plug "zap-zsh/vim"
+# plug "zap-zsh/vim"
 # plug "spaceship-prompt/spaceship-prompt"
 # plug "zap-zsh/atmachine-prompt"
+plug "zdharma-continuum/fast-syntax-highlighting"
 plug "zap-zsh/zap-prompt"
 plug "zap-zsh/fzf"
 plug "zap-zsh/exa"
-plug "zsh-users/zsh-syntax-highlighting"
-
-# Load and initialise completion system
-# autoload -Uz compinit && compinit
+# plug "zsh-users/zsh-syntax-highlighting"
 
 # zprof
