@@ -30,9 +30,10 @@ eval "$(zoxide init zsh)"
 # compctl -K _pip_completion pip3
 # eval "$(pixi completion --shell zsh)"
 
-# key-binds
-bindkey '^I' complete-word        # tab          | complete
-bindkey '^[[Z' autosuggest-accept # shift + tab  | autosuggest
+# keybinds
+bindkey '^I' complete-word # tab          | complete
+# bindkey '^[[Z' autosuggest-accept # shift + tab  | autosuggest
+bindkey '^ ' autosuggest-accept
 
 case "$(uname -s)" in
 
