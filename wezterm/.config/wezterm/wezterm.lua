@@ -13,8 +13,6 @@ config = {
 		},
 	}),
 
-	-- font = wezterm.font("FiraCode Nerd Font"),
-	-- font = wezterm.font(assume_emoji_presentation = true),
 	font_size = 13,
 	color_scheme = "Catppuccin Mocha",
 	cursor_blink_rate = 500,
@@ -23,7 +21,14 @@ config = {
 	initial_cols = 120,
 	initial_rows = 40,
 	-- enable_tab_bar = false,
-	-- window_decorations = "RESIZE",
+	window_decorations = "RESIZE",
+	-- enable_scroll_bar = true,
+	window_padding = {
+		left = 0,
+		right = 0,
+		top = 10,
+		bottom = 0,
+	},
 }
 
 return config
