@@ -10,13 +10,15 @@ export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.local/share/go/bin:$PATH
 export GOPATH=$HOME/.local/share/go
 export PATH=$HOME/.fnm:$PATH
-export PATH=$HOME./node_modules/.bin:$PATH
+export PATH=$HOME/.node_modules/.bin:$PATH
 # export PATH="/opt/homebrew/opt/ncurses/bin:$PATH"
 export EDITOR="nvim"
 export PATH="$HOME/.local/share/neovim/bin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export TMUX_CONFIG_HOME="$HOME/.config/tmux"
 export TMUX_CONF="$TMUX_CONFIG_HOME/tmux.conf"
+export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home"
+export PATH="$JAVA_HOME/bin:$PATH"
 
 # gpg controls ssh
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"

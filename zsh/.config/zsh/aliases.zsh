@@ -23,6 +23,9 @@ alias rm='rm -i'
 alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
 
+# restart gpg-agent
+alias rgpg='gpg-connect-agent reloadagent /bye'
+
 # get top process eating memory
 # alias psmem='ps auxf | sort -nr -k 4 | head -5'
 
