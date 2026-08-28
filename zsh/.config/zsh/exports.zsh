@@ -17,6 +17,7 @@ export PATH="$HOME/.local/share/neovim/bin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export TMUX_CONFIG_HOME="$HOME/.config/tmux"
 export TMUX_CONF="$TMUX_CONFIG_HOME/tmux.conf"
+export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
 
 # Standard Java Approach
 # export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home"
@@ -28,6 +29,8 @@ export PATH="$HOME/.jenv/bin:$PATH"
 # gpg controls ssh
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 export GPG_TTY="$(tty)"
+
+
 
 autoload -Uz compinit && compinit -C
 
