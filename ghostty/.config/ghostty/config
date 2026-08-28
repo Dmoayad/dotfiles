@@ -1,9 +1,10 @@
-theme = catppuccin-mocha
+theme = catppuccin-mocha.conf
 font-family = FiraCode Nerd Font
 font-size                      = 13
 window-inherit-font-size       = true
 # CommitMono Nerd Font Mono
+# bidi = true
 macos-titlebar-style = tabs
 window-height = 40
 window-width = 120
-shell-integration-features = sudo
+shell-integration-features = no-cursor, sudo
